@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.container{
+   padding-left: 8%;
+   padding-right: 8%;
+   box-sizing: border-box;
+}
+
+.header{
+    height: 15%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.traval{
+    width: 200px;
+    height: 100px;
+    cursor:pointer;
+}
+.navbar{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+
+
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 300px 100px;
+}
+.navbar ul li{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: yellow;
+    padding: 8px 25px;
+    transition: all.5s ease;
+}
+.navbar ul li a:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+    
+}
+
+.btn{
+    cursor: pointer;
+    color:yellow;
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+    border: 2px soid #003333;
+    background:transparent;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    margin: 60px 12px;
+
+}
+.btn:hover{
+    color: #000;
+    background-color: #fff;
+}
+.btn a:visited{
+    background-color: #fff;
+    color: yellow;
+}
+.content{
+    text-align: center;
+    margin-top: 12%;
+}
+
+.content h1{
+    font-size: 80px;
+    color:white;
+}
+/* Tourism */
+#about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    padding:20px;
+    margin-bottom: 50px;
+}
+#pic{
+    display: flex;
+
+}
+#pic img{
+    width: 575px;
+    height: 400px;
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+    position: relative;
+    max-width: 600px;
+    background: rgba(255,255, 255,.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    
+}
+#intro h2{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+#intro p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    color: black;
+}
+#intro li{
+    font-size: medium;
+    color: black;
+    font-weight: bold;
+}
+/*culture*/
+.wrapper{
+    position: relative;
+    width:1100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   flex-wrap: wrap;
+    padding: 90px;
+}
+.wrapper .card{
+    position: relative;
+    max-width: 600px;
+    height: 600px;
+    background: white;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px;
+    transition: 0,4s ease-in-out;
+}
+.wrapper.card.cimg{
+    position:relative;
+    width: 260px;
+    height: 260px;
+    
+}
+.wrapper.card.cimg img{
+    max-width: 100%;
+    border-radius: 20px;
+    
+
+}
+.wrapper.card.cdetail{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: black;
+
+}
+.main h1{
+    text-align: center;
+    font-size: 40px;
+}
+/*home section*/
+.welcome{
+    margin: 10% auto 0;
+    color:black;
+    font-size: 50px;
+    
+    text-align: center;
+
+}
+.welcome p{
+    color:whitesmoke;
+    font-size:20px;
+}
