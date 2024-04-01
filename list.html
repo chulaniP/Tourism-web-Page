@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <title>to do lis</title>
+</head>
+<body>
+    <div id="app">
+    <div class="container">
+        <h1>TO DO LIST</h1>
+        <h3>Enter your travel Details</h3>
+        <div v-if="!isEditing">
+            <input type="text" v-mode="todo">
+            <input type="submit" value="Add"@click="storeTodo">
+        </div>
+        <div v-else>
+            <input type="text" v-mode="todo">
+            <input type="submit" value="Update"@click="updateTodo">
+        </div>
+        <ol>
+            <li v-for="(todo,index) in todos">
+                {{todo}}
+                <buttton @click="editTodo(index,todo)">Edit</buttton>
+                <button @click="removeTodo(index)">Delete</button>
+            </li>
+        </ol>
+     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+     <script>
+         new Vue ({
+           el:'#app',
+        
+           data:{
+               isEditing:false,
+               todo:'',
+               todos:[],
+               selectTodo:null
+           },
+           methods:{
+               storeTodo(){
+                   this.todos.push(this.todo)
+                   this.todo=''
+                },
+                editTodo(index,todo){
+                    this.todo=todo
+                    this.selectedIndex=index
+                    this.isEditing=true
+               },
+               updateTodo(){
+                    this.todos.splice(this.selectedIndex,1,this.todo)
+                    this.isEditing=false
+                    this.todo = ''
+               },
+               removeTodo(index){
+                    this.todos.splice(index,1)
+               }
+            }
+          })
+    </script>
+</body>
+</html>
