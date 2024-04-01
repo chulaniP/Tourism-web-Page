@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>
+           contact details
+        </title>
+        <link rel="stylesheet" href="contact.css">
+        <script type="text/javascript">
+        function validate() {
+        if (document.myform.Name.value=="")
+        {
+            alert("Please provide your Name!");
+            document.myform.Name.focus();
+            return false;
+        }
+        if (document.myform.Country.value=="")
+        {
+            alert("Please provide your Country!");
+            document.myform.Name.focus();
+            return false;
+        }
+        if (document.myform.PhoneNo.value=="")
+        {
+            alert("Please provide your PhoneNo!");
+            document.myform.Name.focus();
+            return false;
+        }
+        if (document.myform.Email.value=="")
+        {
+            alert("Please provide your Email!");
+            document.myform.Name.focus();
+            return false;
+        }
+        if(document.myform.Email.value!="")
+        {
+            var emailID=document.myform.Email.value;
+            atpos=emailID.indexOf("@");
+            dotpos=emailID.lastIndexOf(".");
+
+            if (atpos<1|| (dotpos-atpos<2)){
+                alert("please enter correct Email ID! ");
+                document.myform.Email.focus();
+                return false;
+            }
+        }
+    }
+        </script>
+    </head>
+    <body background="C:\Users\iTEC\Desktop\visual\images\man.jpg">
+       <div class="wrapper">
+           <h2>Contact Us</h2>
+           
+           <form  name="myform" onsumbit = "return validate ()">
+               <div class="input_field">
+                   <input type="text"placeholder="Name" id ="name">
+               </div>
+               <div class="input_field">
+                <input type="text"placeholder="Country" id ="Country">
+            </div>
+            <div class="input_field">
+                <input type="text"placeholder="PhoneNo" id ="Phone">
+            </div>
+            <div class="input_field">
+                <input type="text"placeholder="Email" id ="Email">
+            </div>
+            <div class="input_field">
+                <textarea id="message" placeholder="Message"></textarea>
+            </div>
+            <div class="btn">
+                <input type="submit">
+            </div>
+        
+           </form>
+        </div>
+       </div>
+    </body>
+</html>
